@@ -1,9 +1,10 @@
 import Title from '../utils/Title'
+import '../App.css'
 
 const Homepage = () => {
   return (
     <>
-     <Title title="Rick and Morty"/>
+     <h1 className='title'> Rick and Morty </h1>
     </>
   )
 }

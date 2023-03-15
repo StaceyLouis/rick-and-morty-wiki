@@ -1,12 +1,16 @@
 import '../App.css'
 import styled from 'styled-components'
 
-
-
+const Titles = styled.h1`
+    font-size: 2em;
+    color: var(--numeric);
+    margin: 2em 0;
+    font-family: "Swifty";
+`
 const Title = ({title}) => {
  
   return (
-    <h1 className='title'>{title}</h1>
+    <Titles >{title}</Titles>
  
   )
 }

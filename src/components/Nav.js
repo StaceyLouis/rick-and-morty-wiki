@@ -6,13 +6,20 @@ const NavContainer = styled.section`
     display: flex;
     justify-content: flex-end;
     max-width: 100vw;
-    margin-right: 10em;
+    font-family: "Swifty";
 
 `
 const Links = styled(Link)`
     text-decoration: none;
     margin: 1em;
     color: var(--punctuation);
+    font-size: 2rem;
+    &:visited{
+        color: var(--property);
+    }
+    &:nth-child(2):visited{
+        color: var(--acid-green);
+    }
     &:hover{
         color: var(--property);
     }
