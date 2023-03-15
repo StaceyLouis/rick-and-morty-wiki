@@ -13,12 +13,12 @@ function App() {
   const [charData, setCharData] = useState([])
   const [epData, setEpData] = useState([])
   const [pageCount, setPageCount] = useState(null)
-  const [currentPage, setCurrentPage] = useState(3)
+  const [currentPage, setCurrentPage] = useState(1)
   const [pageInfo,setPageInfo] = useState([])
   
   useEffect(() => {
     axios
-    .get(`https://rickandmortyapi.com/api/character/?page=${currentPage}&count=6`)
+    .get(`https://rickandmortyapi.com/api/character/?page=${currentPage}`)
     .then(res=>{
       setCharData(res.data.results)
       setPageCount(res.data.info.pages)
