@@ -1,12 +1,17 @@
 import './App.css';
+import { Routes, Route } from 'react-router';
 import Nav from './components/Nav';
-import Title from './utils/Title';
+import Homepage from './components/Homepage';
+
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <Title title="Rick and Morty"/>
+      <Routes>
+        <Route path='/' element={<Homepage/>}/>
+      </Routes>
+     
     </div>
   );
 }
