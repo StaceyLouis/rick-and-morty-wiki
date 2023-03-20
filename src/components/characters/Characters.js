@@ -15,7 +15,6 @@ const Characters = ({characters, count, current, handleChange}) => {
     ))
   return (
     <Container>
-    <Title title="Characters"/>
     <CharContainer>{charList}</CharContainer>
     <Pagination className="pagination"
       page={current}

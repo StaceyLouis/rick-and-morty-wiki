@@ -4,19 +4,50 @@ import styled from 'styled-components'
 
 const Card = styled.div`
     margin: 1em;
-    width: 25%;
+    width: 15%;
     text-align: left;
     background-color: rgba(	54,	56,	62,0.3);
     padding-bottom: 0.9em;
     border-radius:0.3rem;
     box-shadow: 0.5rem 0.1rem 1rem 0.1rem #202125;
 `
+const ImgContainer = styled.div`
+    position: relative;
+    width: 100%;  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+ 
+  &:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 1.2em;
+    padding: 1em 1.5em;
+  }
+`
 const CardImg = styled.img`
-    width: 100%;
-    &:hover {
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-      }
+opacity: 1;
+display: block;
+width: 100%;
+height: auto;
+transition: .5s ease;
+backface-visibility: hidden;
+&:hover{
+    opacity: 0.3;
+  }
+  
 `
 const CardTitle = styled.p`
     color: var(--property);
@@ -38,11 +69,14 @@ const CharacterCard = ({id,name,image,location,status}) => {
   return (
     <Card id={id} key={id}>
         <Link to={`${id}`}>
+        <ImgContainer>
         <CardImg src={image} alt={name}/>
+        <div className="middle">
+    <div className="text">Learn More</div>
+  </div>
+            </ImgContainer>
         </Link>
-        <CardTitle>{name}</CardTitle>
-        <CardTitle style={{color: "var(--keyword)"}}>Status: <span style={{color: "white"}}>{status}</span></CardTitle>
-        <CardLink to={location.url}> {location.name}</CardLink>
+        
        
         </Card>
   )

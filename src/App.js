@@ -7,6 +7,7 @@ import axios from 'axios';
 
 import Characters from './components/characters/Characters'
 import CharacterDetailPage from './components/characters/CharacterDetailPage';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path='characters' element={<Characters handleChange={handleChange} current={currentPage} count={pageCount} characters={charData}/>}/>
         <Route path='characters/:id' element={<CharacterDetailPage characters={charData}/>}/>
       </Routes>
+      <Footer />
      
     </div>
   );

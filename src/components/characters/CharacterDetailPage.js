@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 const CharContainer = styled.div`
   margin-top: 6em;
+  margin-bottom: 25vh;
   display: flex;
   justify-content: center;
   .right{

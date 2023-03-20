@@ -1,4 +1,5 @@
 import styled from "styled-components"
+
 export const Container = styled.section`
   display: flex;
   flex-flow: column wrap;
@@ -19,6 +20,6 @@ export const Container = styled.section`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-top: 2em;
+    margin-top: 8em;
    
 `
