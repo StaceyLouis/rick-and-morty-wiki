@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const Card = styled.div`
     margin: 1em;
-    width: 15%;
+    width: 20%;
     text-align: left;
     background-color: rgba(	54,	56,	62,0.3);
     padding-bottom: 0.9em;
@@ -31,10 +31,14 @@ const ImgContainer = styled.div`
   }
   
   .text {
-    background-color: #04AA6D;
+    background-color: #282c34;
     color: white;
-    font-size: 1.2em;
-    padding: 1em 1.5em;
+    font-size: 1em;
+    padding: 0.5em 1.5em;
+    .name{
+      color: var(--numeric);
+      margin-bottom: 0.3rem;
+    }
   }
 `
 const CardImg = styled.img`
@@ -72,7 +76,7 @@ const CharacterCard = ({id,name,image,location,status}) => {
         <ImgContainer>
         <CardImg src={image} alt={name}/>
         <div className="middle">
-    <div className="text">Learn More</div>
+    <div className="text"> <span className='name'>{name}</span><br/><img src="https://img.icons8.com/carbon-copy/40/ffffff/long-arrow-right.png"/></div>
   </div>
             </ImgContainer>
         </Link>

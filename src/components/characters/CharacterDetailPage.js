@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router'
 import styled from 'styled-components'
-
+import { motion } from 'framer-motion'
 
 const CharContainer = styled.div`
   margin-top: 6em;
@@ -40,7 +40,12 @@ const CharacterDetailPage = ({characters}) => {
 
     const character = selectCharById(id)
   return (
-  
+    <motion.main
+    initial={{ width: 0 }}
+    animate={{ width: "100%" }}
+    exit={{ x: "100%",opacity:0 }}
+    transition={{ duration: 2, type: "spring", stiffness: 100 }}
+ >
     <CharContainer>
       <div> <img src={character.image}/></div>
      <div className='right'>
@@ -53,7 +58,7 @@ const CharacterDetailPage = ({characters}) => {
        <p className='species'>Episodes: {character.episode.length}</p>    
        </div>    
        </CharContainer>
-       
+       </motion.main>
       
   )
 }
